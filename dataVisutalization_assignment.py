@@ -37,8 +37,6 @@ line_plot(x_axis,holder,xticks,label,title)
 """
 pie chart of four different Agricultural activities such as 
 CropProduction, Livestock, Forestry and Fishing from 1981 to 1985 with labels
-where 0 represent 1981,1 represent 1982,2 represent 1983,3 represent 1984
-and 4 represent 1985
 """
 def subplot_pie_chart(x_axis,label,title):
     plt.figure(figsize=(17,10))
@@ -48,7 +46,7 @@ def subplot_pie_chart(x_axis,label,title):
     plt.show()
     
 x_axis = [get_rows['CropProduction'],get_rows['Livestock'],get_rows['Forestry'],get_rows['Fishing']]
-label = get_rows.index
+label=get_rows['Year']
 title = ['CropProduction','Livestock','Forestry','Fishing']
 
 subplot_pie_chart(x_axis,label,title)
@@ -79,5 +77,7 @@ x_axis = Year_group.index
 holder = Year_group['Harvested Acres']
 title = 'A Bar Chart showing the total number of acres harvested between  2012 to 2020 of Avocados'
 bar_chart(x_axis,holder,title)
+
+
 
 
